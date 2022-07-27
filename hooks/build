@@ -1,9 +1,2 @@
 #!/bin/bash
-docker buildx build \
---file ${DOCKERFILE_PATH} \
---progress=plain \
---cache-from ${IMAGE_NAME} \
---push \ 
---platform linux/amd64,linux/arm64 \
---tag nitiknirdorg/tester:test \
-.
+docker buildx build --tag nitiknirdorg/tester:test --file ${DOCKERFILE_PATH} --progress=plain --push --platform linux/amd64,linux/arm64 .
