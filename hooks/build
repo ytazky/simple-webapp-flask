@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build --progress=plain .
+docker buildx build --progress=plain .
