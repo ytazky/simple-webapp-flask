@@ -3,4 +3,5 @@ docker buildx build \
 --file ${DOCKERFILE_PATH} \
 --progress=plain \
 --cache-from ${IMAGE_NAME} \
---tag ${IMAGE_NAME}
+--tag ${IMAGE_NAME} \
+.
