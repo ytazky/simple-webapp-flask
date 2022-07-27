@@ -1,4 +1,4 @@
-# Simple Web Application
+i# Simple Web Application
 
 This is a simple web application using [Python Flask](http://flask.pocoo.org/) and [MySQL](https://www.mysql.com/) database. 
 This is used in the demonstration of development of Ansible Playbooks.
@@ -33,8 +33,3 @@ Start web server
     FLASK_APP=app.py flask run --host=0.0.0.0
     
 ## 4. Test
-
-Open a browser and go to URL
-
-    http://<IP>:5000                            => Welcome
-    http://<IP>:5000/how%20are%20you            => I am good, how about you?
