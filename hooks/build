@@ -3,7 +3,7 @@ docker buildx build \
 --file ${DOCKERFILE_PATH} \
 --progress=plain \
 --cache-from ${IMAGE_NAME} \
---tag nitiknirdorg/tester:test \
 --push \ 
 --platform linux/amd64,linux/arm64 \
+--tag nitiknirdorg/tester:test \
 .
