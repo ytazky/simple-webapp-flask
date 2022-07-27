@@ -1,21 +1,6 @@
 #!/bin/bash
-echo "==============="
-echo "pre_build start for ${IMAGE_NAME}"
-echo "==============="
 docker run --privileged --rm tonistiigi/binfmt --install all
 docker run --privileged --rm multiarch/qemu-user-static --reset -p yes
 docker buildx rm builder
 docker buildx rm multiarch
-docker buildx create \
---name multiarch \
---driver docker-container \
---platform linux/amd64,linux/arm64 \
---use
-docker buildx ls
-echo "============="
-echo "pre_build end for ${IMAGE_NAME}"
-echo "============="
-
-echo "==========="
-echo "build start for ${IMAGE_NAME}"
-echo "==========="
+docker buildx create --name multiarch --driver docker-container --platform linux/amd64,linux/arm64 --use
