@@ -1,2 +1,2 @@
 #!/bin/bash
-docker buildx build --tag nitiknirdorg/tester:test --file ${DOCKERFILE_PATH} --progress=plain --push --platform linux/amd64,linux/arm64 .
+docker buildx build --tag ${IMAGE_NAME} --file ${DOCKERFILE_PATH} --progress=plain --push --platform linux/amd64,linux/arm64 .
