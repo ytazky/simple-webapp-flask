@@ -1,1 +1,2 @@
-FROM ubuntu:latest
+FROM alpine
+CMD "Testing!"
