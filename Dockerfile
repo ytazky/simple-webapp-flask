@@ -1,4 +1,8 @@
-FROM centos:7
-RUN apt-get update
-RUN apt-get -y install python
-CMD ["echo", "Hello, Darwin"]
+ARG ARCH=
+FROM ${ARCH}debian:buster-slim
+
+RUN apt-get update \
+&& apt-get install -y curl \
+&& rm -rf /var/lib/apt/lists/*
+
+ENTRYPOINT [ "curl" ]
