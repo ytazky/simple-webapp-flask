@@ -1,6 +1,5 @@
-FROM debian:buster-slim
+FROM debian
 
-RUN apt-get update \
-&& apt-get install -y curl
+RUN apt-get update && apt-get install -y curl
 
 ENTRYPOINT [ "curl" ]
