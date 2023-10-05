@@ -1,2 +1,2 @@
 FROM arm64v8/alpine:3.8
-COPY qemu-aarch64-static /usr/bin/
+COPY qemu-aarch64 /usr/bin/
