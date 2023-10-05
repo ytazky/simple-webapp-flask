@@ -1,6 +1,0 @@
-FROM arm32v6/alpine:3.8
-COPY qemu-arm /usr/bin/
-
-RUN apt-get update && rm -rf /var/lib/apt/lists/*
-
-ENTRYPOINT ["echo", "Hello There!"]
